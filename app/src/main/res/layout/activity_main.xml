@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="264dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="27dp"
+        android:text="Simple BMI Calculator"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btncalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="269dp"
+        android:text="Calculate BMI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edtweight"
+        app:layout_constraintTop_toBottomOf="@+id/edtweight" />
+
+    <EditText
+        android:id="@+id/edtheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Enter your height(in cm)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtweight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/edtweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:ems="10"
+        android:hint="Enter your Weight(in kgs)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btncalc"
+        app:layout_constraintStart_toStartOf="@+id/edtheight"
+        app:layout_constraintTop_toBottomOf="@+id/edtheight" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="57dp"
+        android:text="Display"
+        app:layout_constraintBottom_toTopOf="@+id/edtheight"
+        app:layout_constraintEnd_toEndOf="@+id/btncalc"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
